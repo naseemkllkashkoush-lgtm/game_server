@@ -6,23 +6,28 @@ const USER_SCHEMA = new Schema({
         required: true,
         min:1
     },
+ Email: {
+        type: String,
+        required: true,
+        match: [/^\d{10}$/, "should match email"]
+    },
 
     PaymentNum: {
         type: String,
         // match: [/^\d{16}$/, "most be 16 digits"],
         max:16,
         min:16,
-        required: true,
+       
     },
 
     PaymentCardDate: {
         type: Date,
-        required: true,
+      
     },
 
     CVC: {
         type: String,
-        required: true,
+       
         max:3,
         min:3        
     },

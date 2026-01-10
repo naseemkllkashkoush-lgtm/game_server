@@ -5,12 +5,12 @@ const createuser = async (req, res) => {
 const {
     Name,
     PaymentNum,
-    PaymentCardDate,
-    CVC,
-    Password,
+     lastname,
     PhoneNum,
     age,
-    lastname,
+   PaymentCardDate,
+    CVC,
+    Password,
 } = req.body
 try {
     const user = await usermodule.create({
@@ -37,7 +37,6 @@ catch (error) {
 }
 
 const login = async (req, res) => {
-    const { PhoneNum, Password } = req.body
     try {
         const { PhoneNum, Password } = req.body;
         const user = await usermodule.findOne({ PhoneNum });
