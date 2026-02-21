@@ -4,10 +4,7 @@ const PRODUCT_SCHEMA= new Schema ({
        type:String ,
        required: true,
     },
-    Price:{
-        type:Number
-    },
-    picture:{
+    image:{
         type :String
     },
     category:{

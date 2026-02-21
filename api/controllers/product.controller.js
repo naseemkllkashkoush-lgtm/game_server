@@ -3,7 +3,7 @@ const createProduct = async (req, res) => {
     const {
         Name,
         Price,
-        picture,
+        image,
         category,
         description,
         TimeCooking,
@@ -13,7 +13,6 @@ const createProduct = async (req, res) => {
         const product = await productModule.create({
             Name,
             Price,
-            picture,
             category,
             description,
             TimeCooking,
