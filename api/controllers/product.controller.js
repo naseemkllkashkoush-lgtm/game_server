@@ -13,13 +13,15 @@ const createProduct = async (req, res) => {
         const product = await productModule.create({
             Name,
             Price,
+            image,
             category,
             description,
             TimeCooking,
             MeatType,
         })
         res.status(200).json({
-            message: "product created " + Name
+            message: "product created " + Name,
+            data: product
         });
     }
     catch (error) {
