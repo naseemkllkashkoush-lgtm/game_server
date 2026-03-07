@@ -1,26 +1,30 @@
-const { Schema, model, } = require("mongoose");
-const PRODUCT_SCHEMA= new Schema ({
-    Name:{
-       type:String ,
-       required: true,
+const { Schema, model } = require("mongoose");
+
+const PRODUCT_SCHEMA = new Schema({
+    Name: {
+        type: String,
+        required: true,
     },
-    image:{
-        type :String
+    Price: { // Added this field
+        type: Number,
+        required: true,
     },
-    category:{
-        type:String
+    image: {
+        type: String
     },
-    description:{ 
-        type:String 
+    category: {
+        type: String
     },
-    TimeCooking:{
-        type:Number
+    description: {
+        type: String
     },
-    MeatType:{
-        type:String
+    TimeCooking: {
+        type: Number
+    },
+    MeatType: {
+        type: String
     }
+}, { timestamps: true }); // Optional: adds createdAt and updatedAt
 
-
-})
 const productModule = model("product", PRODUCT_SCHEMA);
-module.exports = productModule
+module.exports = productModule;
