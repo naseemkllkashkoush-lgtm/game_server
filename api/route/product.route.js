@@ -5,6 +5,6 @@ const productRout = express.Router();
 
 productRout.post("/createproduct", createProduct)
 productRout.post("/findAllProduct", findAllProduct)
-productRout.delete("/deleteProduct", deleteProduct)
+productRout.delete("/deleteProduct/:id", deleteProduct)
 
 module.exports = productRout;
