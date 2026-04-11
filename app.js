@@ -6,7 +6,8 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 app.use(route);
-const mongourl = "mongodb+srv://naseemkllkashkoush_db_user:naseem123@cluster0.kf1umgq.mongodb.net/"
+// const mongourl = "mongodb+srv://naseemkllkashkoush_db_user:naseem123@cluster0.kf1umgq.mongodb.net/"
+const mongourl = "mongodb+srv://naseem:naseemk2011@cluster0.ccfpqb8.mongodb.net/"
 
 mongoose.connect(mongourl);
 
