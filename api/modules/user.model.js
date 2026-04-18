@@ -9,7 +9,7 @@ const USER_SCHEMA = new Schema({
     Email: {
         type: String,
         required: true,
-        match: [/^\d{10}$/, "should match email"]
+        min: 10
     },
 
     PaymentNum: {
@@ -19,12 +19,10 @@ const USER_SCHEMA = new Schema({
         min: 16,
 
     },
-
     PaymentCardDate: {
         type: Date,
 
     },
-
     CVC: {
         type: String,
 
@@ -36,20 +34,20 @@ const USER_SCHEMA = new Schema({
         required: true,
         match: [/^\d{2}$/, "most be 2 digits"],
     },
-
     Password: {
         type: String,
         required: true,
-        min:8,
-        max:15
+        min: 8,
+        max: 15
     },
     PhoneNum: {
         required: true,
         type: String,
+        unique: true,
         match: [/^\d{10}$/, "most be 10 digits"],
     },
-    
+
 });
 
-const usermodule = model("user2", USER_SCHEMA);
+const usermodule = model("0user", USER_SCHEMA);
 module.exports = usermodule
