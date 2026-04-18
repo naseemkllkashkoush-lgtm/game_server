@@ -18,8 +18,8 @@ const createuser = async (req, res) => {
             Email,
         })
         res.status(200).json({
+            success: true,
             message: "wellcome " + Name
-
         });
     }
     catch (error) {
