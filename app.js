@@ -27,7 +27,7 @@ app.get("/", (req, res) => {
 
 app.get("/main", (req, res) => {
     res.status(200).json({
-        name: "nseem",
+        name: "naseem",
         age: 12,
     })
 })

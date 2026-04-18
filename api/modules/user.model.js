@@ -40,20 +40,16 @@ const USER_SCHEMA = new Schema({
     Password: {
         type: String,
         required: true,
-        match: [/^\d{16}$/, "most be 16 digits"],
+        min:8,
+        max:15
     },
     PhoneNum: {
         required: true,
         type: String,
         match: [/^\d{10}$/, "most be 10 digits"],
     },
-    lastname: {
-        required: true,
-        type: String,
-        // match:[/^\d{15}$/, "most be 16 digits"],
-    }
-
+    
 });
 
-const usermodule = model("user", USER_SCHEMA);
+const usermodule = model("user2", USER_SCHEMA);
 module.exports = usermodule
