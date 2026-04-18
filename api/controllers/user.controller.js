@@ -4,24 +4,18 @@ const usermodule = require("../modules/user.model");
 const createuser = async (req, res) => {
     const {
         Name,
-        PaymentNum,
-        lastname,
         PhoneNum,
         age,
-        PaymentCardDate,
-        CVC,
         Password,
+        Email,
     } = req.body
     try {
         const user = await usermodule.create({
             Name,
-            PaymentNum,
-            PaymentCardDate,
-            CVC,
             Password,
             PhoneNum,
             age,
-            lastname,
+            Email,
         })
         res.status(200).json({
             message: "wellcome " + Name
